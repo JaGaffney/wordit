@@ -1,0 +1,272 @@
+body {
+  background: var(--gray900);
+}
+main {
+  width: 100%;
+  min-height: 50rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: wrap;
+}
+
+.panel {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+.info-panel {
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+.main-panel {
+  background: var(--gray800);
+  box-shadow: var(--shadow500);
+  border-radius: 8px 8px 0 0;
+  color: var(--gray200);
+  height: 100%;
+  min-height: 50rem;
+  width: 85%;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+/////////////////
+// Components - members
+////////////////////
+.member-panel {
+  background: var(--gray900);
+  color: var(--gray200);
+  height: 100%;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow500);
+}
+.member-panel-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  div {
+    background: var(--gray700);
+    color: var(--gray100);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    margin: 0.5rem;
+    min-width: 9rem;
+    word-wrap: anywhere;
+    cursor: pointer;
+    &:hover {
+      background: var(--gray800);
+    }
+    &:focus {
+      background: var(--gray800);
+    }
+  }
+}
+.member-button-edit {
+  background-image: linear-gradient(
+    to right,
+    var(--red700),
+    var(--red600)
+  ) !important;
+  color: var(--red50) !important;
+  &:hover {
+    border-color: var(--red600) !important;
+    background: var(--red800) !important;
+  }
+}
+.member-button-save {
+  background-image: linear-gradient(
+    to right,
+    var(--teal700),
+    var(--teal600)
+  ) !important;
+  color: var(--teal50) !important;
+  &:hover {
+    border-color: var(--teal600) !important;
+    background: var(--teal800) !important;
+  }
+}
+.member-panel-options {
+  display: flex;
+  justify-content: space-between;
+  div {
+    h3 {
+      margin: 0;
+    }
+  }
+}
+
+.dialog-container {
+  .MuiDialog-paper {
+    background: var(--gray800);
+    color: var(--gray100);
+  }
+}
+.dialog-settings {
+  margin: 1rem 0 4rem 0;
+  padding: 0 3rem;
+}
+.dialog-settings-container {
+  display: flex;
+  background: var(--gray700);
+  color: var(--gray100);
+  padding: 0.5rem;
+  border-radius: 2px;
+  margin: 0.3rem 0;
+}
+.dialog-settings-container-small {
+  font-size: 0.9rem;
+  background: var(--gray800);
+  color: var(--gray100);
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  margin: 0.3rem 0;
+}
+.dialog-info {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+  i {
+    position: absolute;
+    top: 1.2rem;
+    color: var(--gray700);
+    font-size: 0.8rem;
+  }
+}
+.dialog-info-large {
+  width: 100%;
+}
+.dialog-info-span {
+  width: 100%;
+  color: var(--gray100);
+  i {
+    color: var(--gray300);
+  }
+}
+.dialog-info-center {
+  align-items: center;
+}
+.dialog-checkbox {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  height: 3rem;
+  form {
+    margin: 0;
+  }
+}
+.dialog-download-container {
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    width: 100%;
+  }
+  span {
+    width: 100%;
+  }
+  .dialog-checkbox {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/////////////////
+// Components - admin
+////////////////////
+.admin-panel {
+  width: 50%;
+}
+.admin-options {
+  display: flex;
+  align-items: center;
+}
+.member-chip {
+  position: relative;
+  &:focus {
+    border: solid 2px var(--accent);
+  }
+}
+
+/////////////////
+// Components - groups
+////////////////////
+.group-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--gray200);
+  height: 100%;
+  min-height: 15rem;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+.group-box {
+  background: var(--gray900);
+  color: white;
+  width: 100%;
+  min-width: 5rem;
+  max-width: 15rem;
+  min-height: 8rem;
+  height: auto;
+  border: solid 3px var(--blue700);
+  border-radius: 6px;
+  margin: 1rem;
+  padding: 0.5rem;
+  box-shadow: var(--shadow100);
+  text-transform: capitalize;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.group-number {
+  border-radius: 20% 20% 50% 20%;
+  background: var(--blue700);
+  color: var(--blue100);
+  padding: 0.1rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: -1rem;
+  margin-left: -100%;
+  z-index: 1;
+}
+.group-item {
+  cursor: grab;
+  padding: 0.5rem;
+  width: 100%;
+  border: solid 1px transparent;
+  border-radius: 5px;
+  &:hover {
+    border: solid 1px var(--blue700);
+  }
+}
+
+/////////////////
+// Components - download
+////////////////////
+.dialog-download-buttons {
+  flex-wrap: wrap;
+  height: 6rem;
+  button,
+  a {
+    height: 2.5rem;
+  }
+}

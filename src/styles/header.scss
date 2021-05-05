@@ -1,0 +1,56 @@
+header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem 0;
+}
+
+.header-container {
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 0 0 4rem;
+}
+
+.header-logo {
+  padding: 1rem;
+  margin-left: 2rem;
+  text-decoration: none;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  img {
+    margin: 0;
+  }
+  span {
+    width: auto;
+    margin-left: 1rem;
+    font-size: 2rem;
+    text-transform: lowercase;
+  }
+}
+
+.hamburger-links {
+  padding-top: 0.4rem;
+}
+
+.speeddial {
+  position: fixed;
+  top: 10px;
+  right: 50px;
+}
+
+// overrides
+.MuiSpeedDial-fab {
+  border-radius: 20% !important;
+  background-color: var(--blue700) !important;
+  color: var(--blue50) !important;
+  &:hover {
+    background-color: var(--blue800) !important;
+  }
+}

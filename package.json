@@ -1,7 +1,7 @@
 {
   "name": "wordit",
   "private": true,
-  "description": "The automatic grouping application that's random without being random. Groups created with algorithms to ensure no two groups are the same.",
+  "description": "Application designed to help people with dyslexia increase their vocabulary (this is based on personal experience and has zero scientific background).",
   "version": "0.1.0",
   "author": "Jon Gaffney",
   "dependencies": {
@@ -42,8 +42,8 @@
   },
   "keywords": [
     "wordit",
-    "grouping applicaton",
-    "random groups"
+    "learning applicaton",
+    "dyslexia"
   ],
   "license": "0BSD",
   "scripts": {

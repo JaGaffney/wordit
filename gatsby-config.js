@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `wordit`,
-    description: `The automatic grouping application that's random without being random. Groups are created with algorithms to ensure no two groups are the same.`,
+    description: `Application designed to help people with dyslexia increase their vocabulary (this is based on personal experience and has zero scientific background).`,
     author: `Jon Gaffney`,
   },
   plugins: [

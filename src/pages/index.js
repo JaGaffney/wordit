@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import WOTD from "../components/wotd/wotd"
 
 const IndexPage = props => {
   const [width, setWidth] = useState(1000)
@@ -29,13 +30,15 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="wordit" />
-      <section className="main-panel"></section>
+      <section className="main-panel">
+        <WOTD />
+      </section>
     </Layout>
   )
 }
 
-const mapStateToProps = ({ data }) => {
-  return { data }
+const mapStateToProps = ({ data, user }) => {
+  return { data, user }
 }
 
 export default connect(mapStateToProps)(IndexPage)

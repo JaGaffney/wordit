@@ -1,7 +1,7 @@
 class Word {
   word: string = ""
-  spoken: number = 0
-  written: number = 0
+  spoken: Array<boolean> = [false, false, false]
+  written: Array<boolean> = [false, false, false]
   used: boolean = false
 
   constructor(word: string) {
@@ -15,14 +15,20 @@ class Word {
     return this.used
   }
 
-  setSpoken() {
-    this.spoken += 1
+  getSpoken(): Array<boolean> {
+    return this.spoken
   }
-  setWritten() {
-    this.written += 1
+  setSpoken(location: number) {
+    this.spoken[location - 1] = !this.spoken[location - 1]
+  }
+  getWritten(): Array<boolean> {
+    return this.written
+  }
+  setWritten(location: number) {
+    this.written[location - 1] = !this.written[location - 1]
   }
   setUsed() {
-    this.used = true
+    this.used = !this.used
   }
 
   getAllData(): object {

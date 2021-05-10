@@ -17,10 +17,22 @@ for (let i in WordDataArray) {
 const initialState = {
   data: WordData,
   user: UserData,
+  wotd: "",
+  forceLoad: 0,
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "SET_WOTD":
+      return {
+        ...state,
+        wotd: action.payload,
+      }
+    case "UPDATE_USER":
+      return {
+        ...state,
+        forceLoad: (state.forceLoad += 1),
+      }
     default:
       return state
   }

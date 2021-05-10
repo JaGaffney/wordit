@@ -4,13 +4,15 @@ class Data {
   wordList: Array<Word> = []
 
   constructor() {
-    for (let i in testWordList) {
-      let newWord = new Word(
-        testWordList[i],
-        "phonetic test",
-        "description test"
+    const words = require("./words.json")
+    for (let word in words) {
+      let newWord: Word = new Word(
+        word,
+        words[word].phonetic,
+        words[word].description,
+        words[word].use,
+        words[word].type
       )
-
       this.setActiveWordList(newWord)
     }
   }
@@ -19,15 +21,23 @@ class Data {
     return this.wordList
   }
 
-  getWordData(word: string): { phonetic: string; description: string } {
+  getWordData(
+    word: string
+  ): {
+    phonetic: string
+    description: string
+    use: string
+    type: string
+  } {
     let wordData = {
       phonetic: "",
       description: "",
+      use: "",
+      type: "",
     }
     for (let i in this.wordList) {
       if (word === this.wordList[i].getWord()) {
-        wordData.phonetic = this.wordList[i].getPhonetic()
-        wordData.description = this.wordList[i].getDescription()
+        wordData = this.wordList[i].getWordInfo()
       }
     }
     return wordData
@@ -39,23 +49,3 @@ class Data {
 }
 
 export default Data
-
-const testWordList = [
-  "the",
-  "be",
-  "want",
-  "because",
-  "because",
-  "because",
-  "any",
-  "these",
-  "give",
-  "day",
-  "most",
-  "us",
-  "was",
-  "is",
-  "had",
-  "were",
-  "said",
-]

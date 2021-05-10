@@ -1,9 +1,32 @@
 body {
+  height: 100vh;
   background: var(--gray800);
+  background-image: linear-gradient(
+    135deg,
+    var(--violet600) 10%,
+    var(--violet900) 100%
+  );
 }
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+body::before {
+  clip-path: circle(30% at left 20%);
+  opacity: 0.4;
+  background-image: linear-gradient(
+    135deg,
+    var(--violet900) 10%,
+    var(--violet600) 100%
+  );
+}
+
 main {
   width: 100%;
-  min-height: 50rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -12,13 +35,17 @@ main {
   flex-direction: wrap;
 }
 .main-panel {
-  background: var(--gray800);
   color: var(--gray200);
   height: 100%;
-  min-height: 50rem;
-  width: 60%;
-  padding: 1rem;
+  width: 70%;
+  padding: 2rem 5rem;
   font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  // box-shadow: 0 8px 32px 0 rgba(100, 22, 163, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(197, 97, 255, 0.18);
 }
 
 /////////////////////////////
@@ -41,19 +68,28 @@ main {
   padding: 1.5rem;
   margin: 4rem auto 2rem auto;
   border-radius: 4px;
+  letter-spacing: 2px;
   span:nth-of-type(2) {
     color: var(--gray600);
     font-size: 2rem;
     font-weight: 500;
+    letter-spacing: 1px;
   }
 }
 
 .wotd__info {
+  padding: 1rem;
+  background: var(--violet50);
+  color: var(--gray800);
+  border-radius: 4px;
+  margin-bottom: 2rem;
   p {
+    margin: 0;
+    margin-bottom: 1rem;
     display: flex;
     span:nth-of-type(1) {
       width: 10%;
-      color: var(--gray400);
+      color: var(--gray700);
       font-weight: 500;
       font-style: italic;
       font-size: 0.9rem;
@@ -82,5 +118,24 @@ main {
     width: 100%;
     text-transform: capitalize;
     text-align: center;
+  }
+}
+
+.wotd__button-container {
+  display: flex;
+}
+.wotd__button {
+  background: var(--violet600);
+  color: var(--violet50);
+  margin: 1rem auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 1rem 4rem;
+
+  &:hover,
+  &:focus {
+    background: var(--violet800);
+    color: var(--violet100);
   }
 }

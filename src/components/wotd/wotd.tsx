@@ -57,9 +57,9 @@ export const WOTD = props => {
         }
       />
 
-      <div>
+      {/* <div>
         <button>Skip</button>
-      </div>
+      </div> */}
 
       <div className="wotd__info">
         <p>

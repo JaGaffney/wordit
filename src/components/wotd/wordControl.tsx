@@ -42,11 +42,16 @@ export const WordControl = props => {
   }
 
   return (
-    <div className="wotd__control">
-      {checkBox("spoken", props.activeUserDataSpoken)}
-      {checkBox("written", props.activeUserDataWritten)}
-      <button onClick={wordChangeHandler}>Complete</button>
-    </div>
+    <>
+      <div className="wotd__control">
+        {checkBox("spoken", props.activeUserDataSpoken)}
+        {checkBox("written", props.activeUserDataWritten)}
+      </div>
+
+      <div className="wotd__button-container">
+        <button className="wotd__button" onClick={wordChangeHandler}>New Word</button>
+      </div>
+    </>
   )
 }
 

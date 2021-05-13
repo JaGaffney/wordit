@@ -6,26 +6,23 @@ import SEO from "../components/seo"
 import WOTD from "../components/wotd/wotd"
 
 const IndexPage = props => {
-  const [width, setWidth] = useState(1000)
-
-  function handleWindowSizeChange() {
-    if (typeof window !== "undefined") {
-      setWidth(window.innerWidth)
-    }
-  }
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", handleWindowSizeChange)
-    }
-    return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("resize", handleWindowSizeChange)
-      }
-    }
-  }, [])
-
-  let isMobile = width <= 768
+  // const [width, setWidth] = useState(1000)
+  // function handleWindowSizeChange() {
+  //   if (typeof window !== "undefined") {
+  //     setWidth(window.innerWidth)
+  //   }
+  // }
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     window.addEventListener("resize", handleWindowSizeChange)
+  //   }
+  //   return () => {
+  //     if (typeof window !== "undefined") {
+  //       window.removeEventListener("resize", handleWindowSizeChange)
+  //     }
+  //   }
+  // }, [])
+  // let isMobile = width <= 768
 
   return (
     <Layout>

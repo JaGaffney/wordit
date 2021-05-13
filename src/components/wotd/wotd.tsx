@@ -48,7 +48,10 @@ export const WOTD = props => {
 
   return (
     <div className="wotd">
-      <h1>Word of the Day</h1>
+      <div className="title">
+        <h1>Word of the Day</h1>
+      </div>
+
 
       <WordDisplay
         activeWord={props.wotd}
@@ -57,11 +60,7 @@ export const WOTD = props => {
         }
       />
 
-      {/* <div>
-        <button>Skip</button>
-      </div> */}
-
-      <div className="wotd__info">
+      <div className="wotd__info border-decoration">
         <p>
           <span>Description</span> <span>{activeData.description}.</span>
         </p>

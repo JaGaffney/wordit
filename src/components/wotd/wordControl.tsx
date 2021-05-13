@@ -23,7 +23,7 @@ export const WordControl = props => {
   const checkBox = (type: string, arr: Array<boolean>) => {
     return (
       <div className="wotd__control-container">
-        <div>
+        <div className="border-decoration">
           <h2>{type}</h2>
           {tempRange.map(i => {
             return (

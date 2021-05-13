@@ -3,8 +3,6 @@ import { connect } from "react-redux"
 
 import Checkbox from "@material-ui/core/Checkbox"
 
-
-// NOTE: NOT UPDATING CORRECTLY
 export const WordControl = props => {
   const onHandleChange = e => {
     props.wordControlHandler(e.target.id)

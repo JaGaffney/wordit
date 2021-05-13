@@ -4,6 +4,8 @@ import "./src/styles/header.scss"
 import "./src/styles/layout.scss"
 import "./src/styles/generics.scss"
 import "./src/styles/responsive.scss"
+import "./src/styles/accessibility.scss"
+
 import wrapWithProvider from "./wrap-with-provider"
 export const wrapRootElement = wrapWithProvider
 

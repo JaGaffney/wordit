@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 
+import DescriptionIcon from '@material-ui/icons/Description';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
+import HelpIcon from '@material-ui/icons/Help';
+
 import { setWOTD } from "../actions/api"
 
 import WordDisplay from "./wordDisplay"
@@ -15,8 +19,8 @@ interface WordInfo {
 }
 
 export const WOTD = props => {
-  const [newWord, setNewWord] = useState(false)
-  const [activeUserDataSpoken, setActiveUserDataSpoken] = useState<Array<boolean>>([false, false, false])
+  const [newWord, setNewWord] = useState<boolean>(false)
+  const [activeUserDataSpoken, setActiveUserDataSpoken] = useState<boolean[]>([false, false, false])
   const [activeUserDataWritten, setActiveUserDataWritten] = useState<Array<boolean>>([false, false, false])
   const [activeData, setActiveData] = useState<WordInfo>({})
 
@@ -62,18 +66,21 @@ export const WOTD = props => {
 
       <div className="wotd__info border-decoration">
         <p>
-          <span>Description</span> <span>{activeData.description}.</span>
+          <span><DescriptionIcon /></span>
+          <span>{activeData.description}.</span>
         </p>
         <p>
-          <span>Use</span> <span>{activeData.use}.</span>
+          <span><ChatBubbleIcon /></span>
+          <span>"{activeData.use}".</span>
         </p>
         <p>
-          <span>More info</span>{" "}
+          <span><HelpIcon /></span>
           <span>
-            {" "}
-            <a
-              href={`https://en.wikipedia.org/wiki/${props.wotd}`}
-            >{`https://en.wikipedia.org/wiki/${props.wotd}`}</a>
+            <i>
+              <a
+                href={`https://en.wikipedia.org/wiki/${props.wotd}`}
+              >{`https://en.wikipedia.org/wiki/${props.wotd}`}</a>
+            </i>
           </span>
         </p>
       </div>

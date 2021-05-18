@@ -14,15 +14,15 @@
   body::before {
     z-index: -1;
   }
-  body {
-    background-image: linear-gradient(
-      135deg,
-      var(--violet100) 10%,
-      var(--violet300) 100%
-    );
+  .main-panel {
+    background: inherit;
+    border: solid 10px var(--gray800);
+    border-radius: 40px;
   }
 
-  .main-panel {
-    background: var(--violet700);
+  .border-decoration {
+    border: none;
+    border-image: none;
+    border-radius: 4px;
   }
 }

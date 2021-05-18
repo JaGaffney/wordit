@@ -8,6 +8,7 @@ class Data {
     for (let word in words) {
       let newWord: Word = new Word(
         word,
+        words[word].word_id,
         words[word].phonetic,
         words[word].description,
         words[word].use,

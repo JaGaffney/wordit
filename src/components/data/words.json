@@ -1,11 +1,13 @@
 {
   "alacrity": {
+    "word_id": 1,
     "phonetic": "ə-ˈla-krə-tē",
     "description": "Promptness in response, a cheerful readiness",
     "use": "She accepted the invitation with alacrity",
     "type": ""
   },
   "cat": {
+    "word_id": 2,
     "phonetic": "kæt",
     "description": "this is a cat",
     "use": "this is a cat",

@@ -1,5 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
+import CreateIcon from '@material-ui/icons/Create';
+import MicIcon from '@material-ui/icons/Mic';
 
 import { updateWordChallenge, completeWord } from "../actions/api"
 
@@ -23,8 +25,9 @@ export const WordControl = props => {
   const checkBox = (type: string, arr: Array<boolean>) => {
     return (
       <div className="wotd__control-container">
-        <div className="border-decoration">
-          <h2>{type}</h2>
+        <div className="border-decoration wotd__control-item">
+          <i>{type === "spoken" ? <MicIcon /> : <CreateIcon />}</i>
+          <h2>{type} </h2>
           {tempRange.map(i => {
             return (
               <WordCheckbox

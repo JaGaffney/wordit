@@ -11,7 +11,7 @@ const WordDataArray = WordData.getWordList()
 
 // temp to add base data to user
 for (let i in WordDataArray) {
-  UserData.addNewWord(WordDataArray[i].getWord())
+  UserData.addNewWord(WordDataArray[i].getWord(), WordDataArray[i].getWordID())
 }
 
 const initialState = {

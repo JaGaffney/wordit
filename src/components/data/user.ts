@@ -10,7 +10,7 @@ class User {
     this.activeWordList.push(data)
   }
 
-  addNewWord(word: string) {
+  addNewWord(word: string, word_id: number) {
     let valid = true
     for (let i in this.activeWordList) {
       if (word === this.activeWordList[i].getWord()) {
@@ -19,7 +19,7 @@ class User {
       }
     }
     if (valid) {
-      const newWord = new UserWord(word)
+      const newWord = new UserWord(word, word_id)
       this.setActiveWordList(newWord)
     }
   }

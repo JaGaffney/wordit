@@ -1,11 +1,13 @@
 class Word {
   word: string = ""
+  word_id: number
   spoken: Array<boolean> = [false, false, false]
   written: Array<boolean> = [false, false, false]
   used: boolean = false
 
-  constructor(word: string) {
+  constructor(word: string, word_id: number) {
     this.word = word
+    this.word_id = word_id
   }
 
   getWord() {
@@ -34,6 +36,7 @@ class Word {
   getAllData(): object {
     return {
       word: this.word,
+      word_id: this.word_id,
       spoken: this.spoken,
       written: this.written,
       used: this.used,

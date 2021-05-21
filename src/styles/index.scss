@@ -1,6 +1,10 @@
-:root {
-  --red: #fa1818;
+*,
+*:before,
+*:after {
+  box-sizing: border-box !important;
+}
 
+:root {
   --dark: black;
   --light: white;
 

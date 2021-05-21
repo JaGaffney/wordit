@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { connect } from "react-redux"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import WOTD from "../components/wotd/wotd"
+import Score from "../components/score/score"
 
 const IndexPage = props => {
   // const [width, setWidth] = useState(1000)
@@ -29,6 +30,7 @@ const IndexPage = props => {
       <SEO title="wordit" />
       <section className="main-panel">
         <WOTD />
+        <Score />
       </section>
     </Layout>
   )

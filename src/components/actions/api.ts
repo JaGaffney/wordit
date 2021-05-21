@@ -35,8 +35,6 @@ export const updateWordChallenge = (user, data: Array<string>) => dispatch => {
 }
 
 export const completeWord = (user, word: string) => dispatch => {
-  console.log("got here")
-  console.log({ word })
   const userData = user.getActiveWordList()
 
   for (let i in userData) {

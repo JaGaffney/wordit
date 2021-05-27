@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Undo from "../components/undo/undo"
 import WOTD from "../components/wotd/wotd"
 import Score from "../components/score/score"
 
@@ -29,6 +30,7 @@ const IndexPage = props => {
     <Layout>
       <SEO title="wordit" />
       <section className="main-panel">
+        <Undo />
         <WOTD />
         <Score />
       </section>

@@ -9,7 +9,7 @@ export const Score = (props) => {
     }, [props.forceLoad])
 
     return (
-        <div>
+        <div className="score border-decoration">
             {props.user.getActiveWordList().length > 0 ? <ScoreTable /> : null}
         </div>
     )

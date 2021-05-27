@@ -5,9 +5,18 @@ class Word {
   written: Array<boolean> = [false, false, false]
   used: boolean = false
 
-  constructor(word: string, word_id: number) {
-    this.word = word
-    this.word_id = word_id
+  constructor(...args: Array<any>) {
+    if (args.length == 2) {
+      this.word = args[0]
+      this.word_id = args[1]
+    }
+    if (args.length == 5) {
+      this.word = args[0]
+      this.word_id = args[1]
+      this.spoken = args[2]
+      this.written = args[3]
+      this.used = args[4]
+    }
   }
 
   getWord() {

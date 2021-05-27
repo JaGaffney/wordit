@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { completeWord } from "../actions/api"
 
-import WordCheckbox from "../wotd/wordCheckbox"
+import WordCheckbox from "../utils/wordCheckbox"
 
 export const ScoreTable = (props) => {
     const onUsedHandler = (id) => {
@@ -66,7 +66,6 @@ export const ScoreTable = (props) => {
                                         key={`${i.word}${1}`}
                                     />
                                 }
-                                {i.used ? "true" : "false"}
                             </td>
                         </tr>
                     )

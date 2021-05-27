@@ -23,6 +23,17 @@ class User {
       this.setActiveWordList(newWord)
     }
   }
+
+  addWord(userword: UserWord) {
+    const newWord = new UserWord(
+      userword["word"],
+      userword["word_id"],
+      userword["spoken"],
+      userword["written"],
+      userword["used"]
+    )
+    this.setActiveWordList(newWord)
+  }
 }
 
 export default User

@@ -1,7 +1,4 @@
-import { Link } from "gatsby"
-import React, { useState } from "react"
-
-// @ts-ignore
+import React from "react"
 
 const Header = ({ siteTitle }) => {
   return <header></header>

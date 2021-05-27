@@ -5,7 +5,7 @@ import MicIcon from '@material-ui/icons/Mic';
 
 import { updateWordChallenge, completeWord } from "../actions/api"
 
-import WordCheckbox from "./wordCheckbox"
+import WordCheckbox from "../utils/wordCheckbox"
 
 export const WordControl = props => {
   const wordControlHandler = id => {

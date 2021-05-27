@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import { connect } from "react-redux"
 
 import Checkbox from "@material-ui/core/Checkbox"
 
 export const WordControl = props => {
+
   const onHandleChange = e => {
     props.wordControlHandler(e.target.id)
   }

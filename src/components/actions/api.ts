@@ -49,3 +49,9 @@ export const completeWord = (user, word: string) => dispatch => {
     type: "UPDATE_USER",
   })
 }
+
+export const undoHandler = undoType => dispatch => {
+  return dispatch({
+    type: undoType,
+  })
+}

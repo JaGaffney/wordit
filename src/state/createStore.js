@@ -65,8 +65,6 @@ const setRedo = state => {
   return init
 }
 
-const redoHandler = state => {}
-
 const reducer = (state, action) => {
   switch (action.type) {
     case "SET_WOTD":

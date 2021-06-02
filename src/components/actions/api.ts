@@ -26,9 +26,7 @@ export const updateWordChallenge = (user, data: Array<string>) => dispatch => {
       }
     }
   }
-
   // localStorageSave(data)
-
   return dispatch({
     type: "UPDATE_USER",
   })
@@ -42,15 +40,13 @@ export const completeWord = (user, word: string) => dispatch => {
       userData[i].setUsed()
     }
   }
-
   // localStorageSave(data)
-
   return dispatch({
     type: "UPDATE_USER",
   })
 }
 
-export const undoHandler = undoType => dispatch => {
+export const undoHandler = (undoType: string) => dispatch => {
   return dispatch({
     type: undoType,
   })

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { completeWord } from "../actions/api"
+import { updateWordChallenge, completeWord } from "../actions/api"
 
 import WordCheckbox from "../utils/wordCheckbox"
 
@@ -9,6 +9,13 @@ export const ScoreTable = (props) => {
     const onUsedHandler = (id) => {
         let word = id.split(":")
         props.completeWord(props.user, word[1])
+    }
+
+    const wordControlHandler = id => {
+        let data = id.split(":")
+        data.push(props.activeWord)
+        console.log("got here")
+        props.updateWordChallenge(props.user, data)
     }
 
     const tempRange = [1, 2, 3]
@@ -36,7 +43,7 @@ export const ScoreTable = (props) => {
                                             checkedBox={i.spoken[ii - 1]}
                                             wordType={"spoken"}
                                             wordNumber={ii}
-                                            wordControlHandler={() => { }}
+                                            wordControlHandler={wordControlHandler}
                                             key={`${i.word}${ii}`}
                                         />
                                     )
@@ -50,7 +57,7 @@ export const ScoreTable = (props) => {
                                             checkedBox={i.written[ii - 1]}
                                             wordType={"written"}
                                             wordNumber={ii}
-                                            wordControlHandler={() => { }}
+                                            wordControlHandler={wordControlHandler}
                                             key={`${i.word}${ii}`}
                                         />
                                     )
@@ -81,6 +88,6 @@ const mapStateToProps = ({ user, forceLoad }) => {
     return { user, forceLoad }
 }
 
-const mapDispatchToProps = { completeWord }
+const mapDispatchToProps = { updateWordChallenge, completeWord }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ScoreTable)

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 
 import ScoreTable from "./scoreTable"
+import Undo from "../undo/undo"
 
 export const Score = (props) => {
 
@@ -10,6 +11,7 @@ export const Score = (props) => {
 
     return (
         <div className="score border-decoration">
+            <Undo />
             {props.user.getActiveWordList().length > 0 ? <ScoreTable /> : null}
         </div>
     )

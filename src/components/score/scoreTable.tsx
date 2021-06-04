@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 
 import { updateWordChallenge, completeWord } from "../actions/api"
@@ -8,7 +8,7 @@ import WordCheckbox from "../utils/wordCheckbox"
 export const ScoreTable = (props) => {
     const onUsedHandler = (id) => {
         let word = id.split(":")
-        props.completeWord(props.user, word[1])
+        props.completeWord(props.user, props.data, word[1], false)
     }
 
     const wordControlHandler = id => {
@@ -84,8 +84,8 @@ export const ScoreTable = (props) => {
 }
 
 
-const mapStateToProps = ({ user, forceLoad }) => {
-    return { user, forceLoad }
+const mapStateToProps = ({ user, data, forceLoad }) => {
+    return { user, data, forceLoad }
 }
 
 const mapDispatchToProps = { updateWordChallenge, completeWord }

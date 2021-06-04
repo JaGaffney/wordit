@@ -12,5 +12,26 @@
     "description": "this is a cat",
     "use": "this is a cat",
     "type": ""
+  },
+  "Dog": {
+    "word_id": 3,
+    "phonetic": "kæt",
+    "description": "this is a dog",
+    "use": "this is a cat",
+    "type": ""
+  },
+  "rat": {
+    "word_id": 4,
+    "phonetic": "kæt",
+    "description": "this is a dog",
+    "use": "this is a cat",
+    "type": ""
+  },
+  "bird": {
+    "word_id": 5,
+    "phonetic": "kæt",
+    "description": "this is a dog",
+    "use": "this is a cat",
+    "type": ""
   }
 }

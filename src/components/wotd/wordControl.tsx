@@ -12,11 +12,10 @@ export const WordControl = props => {
     let data = id.split(":")
     data.push(props.activeWord)
     props.updateWordChallenge(props.user, data)
-
   }
 
   const wordChangeHandler = () => {
-    props.completeWord(props.user, props.activeWord)
+    props.completeWord(props.user, props.data, props.activeWord, true)
     props.onWordChange()
   }
 
@@ -58,8 +57,8 @@ export const WordControl = props => {
   )
 }
 
-const mapStateToProps = ({ user }) => {
-  return { user }
+const mapStateToProps = ({ user, data, forceLoad }) => {
+  return { user, data, forceLoad }
 }
 
 const mapDispatchToProps = { updateWordChallenge, completeWord }

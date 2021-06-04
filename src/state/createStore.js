@@ -5,13 +5,38 @@ import thunk from "redux-thunk"
 import User from "../components/data/user"
 import Data from "../components/data/data"
 
-const UserData = new User()
-const WordData = new Data()
-const WordDataArray = WordData.getWordList()
+const onLoadData = () => {
+  if (typeof Storage !== "undefined") {
+    let retrievedObject = null
+    if (typeof window !== "undefined") {
+      retrievedObject = localStorage.getItem("user")
+    } else {
+      return new User()
+    }
 
-// temp to add base data to user
-for (let i in WordDataArray) {
-  UserData.addNewWord(WordDataArray[i].getWord(), WordDataArray[i].getWordID())
+    if (retrievedObject === null) {
+      return new User()
+    }
+    let deepClone = JSON.parse(retrievedObject)
+    const returnedData = new User()
+    for (let i in deepClone["activeWordList"]) {
+      returnedData.addWord(deepClone["activeWordList"][i])
+    }
+    if (returnedData !== undefined) {
+      return returnedData
+    }
+  } else {
+    // No web storage Support.
+    return new User()
+  }
+}
+
+const UserData = onLoadData()
+const WordData = new Data()
+// add default word
+const WordDataArray = WordData.getWordList()
+if (UserData.getActiveWordList.length === 0) {
+  UserData.addNewWord(WordDataArray[0].getWord(), WordDataArray[0].getWordID())
 }
 
 const initialState = {
@@ -73,6 +98,7 @@ const reducer = (state, action) => {
         wotd: action.payload,
       }
     case "UPDATE_USER":
+      console.log("update_user")
       return {
         ...state,
         forceLoad: (state.forceLoad += 1),

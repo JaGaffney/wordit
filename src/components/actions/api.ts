@@ -1,6 +1,6 @@
 const localStorageSave = data => {
   if (typeof window !== "undefined") {
-    localStorage.setItem("data", JSON.stringify(data))
+    localStorage.setItem("user", JSON.stringify(data))
   }
 }
 
@@ -26,13 +26,18 @@ export const updateWordChallenge = (user, data: Array<string>) => dispatch => {
       }
     }
   }
-  // localStorageSave(data)
+  localStorageSave(user)
   return dispatch({
     type: "UPDATE_USER",
   })
 }
 
-export const completeWord = (user, word: string) => dispatch => {
+export const completeWord = (
+  user,
+  data,
+  word: string,
+  newWord: boolean
+) => dispatch => {
   const userData = user.getActiveWordList()
 
   for (let i in userData) {
@@ -40,7 +45,27 @@ export const completeWord = (user, word: string) => dispatch => {
       userData[i].setUsed()
     }
   }
-  // localStorageSave(data)
+
+  if (newWord) {
+    // check to see if you need to add a new word or use an older one
+    let counter = 0
+    for (let i in userData) {
+      if (userData[i].getUsed()) {
+        counter += 1
+      }
+    }
+    const latestWordID = userData[userData.length - 1]["word_id"]
+    if (counter >= latestWordID) {
+      const wordArray = data.getWordList()
+      for (let i in wordArray) {
+        if (wordArray[i]["word_id"] === latestWordID + 1) {
+          user.addNewWord(wordArray[i].getWord(), wordArray[i].getWordID())
+        }
+      }
+    }
+  }
+
+  localStorageSave(user)
   return dispatch({
     type: "UPDATE_USER",
   })

@@ -35,7 +35,6 @@ export const WOTD = props => {
   }, [newWord])
 
   useEffect(() => {
-    console.log(props.user)
     const userData = props.user.getActiveWordList()
     for (let i in userData) {
       if (userData[i].getWord() === props.wotd) {

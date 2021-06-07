@@ -47,19 +47,21 @@ export const completeWord = (
   }
 
   if (newWord) {
-    // check to see if you need to add a new word or use an older one
-    let counter = 0
-    for (let i in userData) {
-      if (userData[i].getUsed()) {
-        counter += 1
-      }
-    }
-    const latestWordID = userData[userData.length - 1]["word_id"]
-    if (counter >= latestWordID) {
-      const wordArray = data.getWordList()
+    const wordArray = data.getWordList()
+
+    // turn data into an array
+    const filterdWordArray = wordArray.map(v => v.word)
+    const currentWordsArray = userData.map(v => v.word)
+
+    // filter out the different values
+    const newWordChoice: string = filterdWordArray.filter(
+      (x: string) => currentWordsArray.indexOf(x) === -1
+    )[0]
+
+    if (newWordChoice !== undefined) {
       for (let i in wordArray) {
-        if (wordArray[i]["word_id"] === latestWordID + 1) {
-          user.addNewWord(wordArray[i].getWord(), wordArray[i].getWordID())
+        if (wordArray[i]["word"] === newWordChoice) {
+          user.addNewWord(wordArray[i].getWord())
         }
       }
     }

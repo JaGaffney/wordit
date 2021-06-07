@@ -6,31 +6,45 @@
     "use": "She accepted the invitation with alacrity",
     "type": ""
   },
-  "cat": {
+  "verbose": {
     "word_id": 2,
-    "phonetic": "kæt",
-    "description": "this is a cat",
+    "phonetic": "vər-ˈbōs ",
+    "description": "containing more words than necessary ",
     "use": "this is a cat",
-    "type": ""
+    "type": "noun"
   },
-  "Dog": {
+  "emancipating": {
     "word_id": 3,
-    "phonetic": "kæt",
-    "description": "this is a dog",
+    "phonetic": "i-ˌman(t)-sə-ˈpā-shən ",
+    "description": "to free from any controlling influence (such as traditional mores or beliefs)",
     "use": "this is a cat",
-    "type": ""
+    "type": "verb"
   },
-  "rat": {
+  "clandestine": {
     "word_id": 4,
-    "phonetic": "kæt",
+    "phonetic": "klan-ˈde-stən",
     "description": "this is a dog",
     "use": "this is a cat",
     "type": ""
   },
-  "bird": {
+  "empiricism": {
     "word_id": 5,
-    "phonetic": "kæt",
-    "description": "this is a dog",
+    "phonetic": "im-ˈpir-ə-ˌsi-zəm",
+    "description": " theory that all knowledge originates in experience",
+    "use": "this is a cat",
+    "type": ""
+  },
+  "preponderance": {
+    "word_id": 6,
+    "phonetic": "pri-ˈpän-d(ə-)rən(t)s",
+    "description": "a superiority in weight, power, importance, strength or influence",
+    "use": "this is a cat",
+    "type": ""
+  },
+  "penchant": {
+    "word_id": 7,
+    "phonetic": "päⁿ-ˌshäⁿ",
+    "description": "a strong and continued inclination",
     "use": "this is a cat",
     "type": ""
   }

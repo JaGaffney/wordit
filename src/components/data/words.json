@@ -9,42 +9,42 @@
   "verbose": {
     "word_id": 2,
     "phonetic": "vər-ˈbōs ",
-    "description": "containing more words than necessary ",
+    "description": "Containing more words than necessary ",
     "use": "this is a cat",
     "type": "noun"
   },
   "emancipating": {
     "word_id": 3,
     "phonetic": "i-ˌman(t)-sə-ˈpā-shən ",
-    "description": "to free from any controlling influence (such as traditional mores or beliefs)",
+    "description": "To be freed from any controlling influence (such as traditional mores or beliefs)",
     "use": "this is a cat",
     "type": "verb"
   },
   "clandestine": {
     "word_id": 4,
     "phonetic": "klan-ˈde-stən",
-    "description": "this is a dog",
+    "description": "Undertaken or done so as to escape being observed or known by others",
     "use": "this is a cat",
     "type": ""
   },
   "empiricism": {
     "word_id": 5,
     "phonetic": "im-ˈpir-ə-ˌsi-zəm",
-    "description": " theory that all knowledge originates in experience",
+    "description": "A theory that all knowledge originates in experience",
     "use": "this is a cat",
     "type": ""
   },
   "preponderance": {
     "word_id": 6,
     "phonetic": "pri-ˈpän-d(ə-)rən(t)s",
-    "description": "a superiority in weight, power, importance, strength or influence",
+    "description": "A superiority in weight, power, importance, strength or influence",
     "use": "this is a cat",
     "type": ""
   },
   "penchant": {
     "word_id": 7,
     "phonetic": "päⁿ-ˌshäⁿ",
-    "description": "a strong and continued inclination",
+    "description": "A strong and continued inclination",
     "use": "this is a cat",
     "type": ""
   }

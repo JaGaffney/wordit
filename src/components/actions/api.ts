@@ -56,11 +56,14 @@ export const completeWord = (
     // filter out the different values
     const newWordChoice: string = filterdWordArray.filter(
       (x: string) => currentWordsArray.indexOf(x) === -1
-    )[0]
+    )
+    // randomise the word
+    const randomWord =
+      newWordChoice[Math.floor(Math.random() * newWordChoice.length)]
 
-    if (newWordChoice !== undefined) {
+    if (randomWord !== undefined) {
       for (let i in wordArray) {
-        if (wordArray[i]["word"] === newWordChoice) {
+        if (wordArray[i]["word"] === randomWord) {
           user.addNewWord(wordArray[i].getWord())
         }
       }

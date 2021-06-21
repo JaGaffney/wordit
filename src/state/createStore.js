@@ -2,8 +2,8 @@ import { createStore as reduxCreateStore, applyMiddleware } from "redux"
 import { composeWithDevTools } from "redux-devtools-extension"
 import thunk from "redux-thunk"
 
-import User from "../components/data/user"
-import Data from "../components/data/data"
+import User from "../components/data/users/user"
+import Data from "../components/data/words/data"
 
 const onLoadData = () => {
   if (typeof Storage !== "undefined") {

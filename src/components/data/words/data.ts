@@ -4,7 +4,8 @@ class Data {
   wordList: Array<Word> = []
 
   constructor() {
-    const words = require("./words.json")
+    // should be a db API call
+    const words = require("../words.json")
     for (let word in words) {
       let newWord: Word = new Word(
         word,

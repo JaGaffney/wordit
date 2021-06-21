@@ -8,7 +8,7 @@ import { updateWordChallenge, completeWord } from "../actions/api"
 import WordCheckbox from "../utils/wordCheckbox"
 
 export const WordControl = props => {
-  const wordControlHandler = id => {
+  const wordControlHandler = (id: string) => {
     let data = id.split(":")
     data.push(props.activeWord)
     props.updateWordChallenge(props.user, data)

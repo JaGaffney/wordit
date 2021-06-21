@@ -1,4 +1,4 @@
-class Word {
+class UserWord {
   word: string = ""
   word_id: number
   spoken: Array<boolean> = [false, false, false]
@@ -53,4 +53,4 @@ class Word {
   }
 }
 
-export default Word
+export default UserWord

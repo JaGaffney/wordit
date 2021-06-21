@@ -7,7 +7,6 @@ import Undo from "../undo/undo"
 export const Score = (props) => {
 
     useEffect(() => {
-        console.log("reload")
     }, [props.forceLoad])
 
     return (

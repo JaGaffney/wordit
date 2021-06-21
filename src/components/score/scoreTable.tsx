@@ -9,12 +9,12 @@ import WordCheckbox from "../utils/wordCheckbox"
 const WordCheckBoxMemo = React.memo(WordCheckbox)
 
 export const ScoreTable = (props) => {
-    const onUsedHandler = (id) => {
+    const onUsedHandler = (id: string) => {
         let word = id.split(":")
         props.completeWord(props.user, props.data, word[1], false)
     }
 
-    const wordControlHandler = id => {
+    const wordControlHandler = (id: string) => {
         let data = id.split(":")
         data.push(props.activeWord)
         console.log("got here")

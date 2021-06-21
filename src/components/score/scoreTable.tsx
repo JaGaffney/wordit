@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 import { updateWordChallenge, completeWord } from "../actions/api"
 
 import WordCheckbox from "../utils/wordCheckbox"
+
+
+const WordCheckBoxMemo = React.memo(WordCheckbox)
 
 export const ScoreTable = (props) => {
     const onUsedHandler = (id) => {
@@ -39,7 +42,7 @@ export const ScoreTable = (props) => {
                             <td>
                                 {tempRange.map((ii, kk) => {
                                     return (
-                                        <WordCheckbox
+                                        <WordCheckBoxMemo
                                             checkedBox={i.spoken[ii - 1]}
                                             wordType={"spoken"}
                                             wordNumber={ii}
@@ -53,7 +56,7 @@ export const ScoreTable = (props) => {
                             <td>
                                 {tempRange.map((ii, kk) => {
                                     return (
-                                        <WordCheckbox
+                                        <WordCheckBoxMemo
                                             checkedBox={i.written[ii - 1]}
                                             wordType={"written"}
                                             wordNumber={ii}
@@ -65,7 +68,7 @@ export const ScoreTable = (props) => {
                             </td>
                             <td>
                                 {
-                                    <WordCheckbox
+                                    <WordCheckBoxMemo
                                         checkedBox={i.used}
                                         wordType={"used"}
                                         wordNumber={i.word}

@@ -69,7 +69,7 @@ const undoHandler = state => {
 const setUndo = state => {
   let init = state.undoData
   let val = state.redoData.pop()
-  if (init.length > 9) {
+  if (init.length > 30) {
     init.shift()
     init.push(val)
   } else {

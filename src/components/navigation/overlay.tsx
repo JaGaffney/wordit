@@ -55,7 +55,7 @@ export const Overlay = (props) => {
 
                         </div>
                     </div>}>
-                    <Tween from={{ opacity: 0.6, x: '-400px' }} to={{ opacity: 1, x: '100px' }} duration={0.4} />
+                    <Tween from={{ x: '-800px' }} to={{ x: '100px' }} duration={0.3} />
 
 
                 </Timeline>

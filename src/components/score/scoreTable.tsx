@@ -1,5 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import CreateIcon from '@material-ui/icons/Create';
+import MicIcon from '@material-ui/icons/Mic';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 
 import { updateWordChallenge, completeWord } from "../actions/api"
 
@@ -40,6 +43,8 @@ export const ScoreTable = (props) => {
                                 {i.word}
                             </td>
                             <td>
+                                <div className="table-icon"><MicIcon /></div>
+
                                 {tempRange.map((ii, kk) => {
                                     return (
                                         <WordCheckBoxMemo
@@ -54,6 +59,7 @@ export const ScoreTable = (props) => {
 
                             </td>
                             <td>
+                                <div className="table-icon"><CreateIcon /></div>
                                 {tempRange.map((ii, kk) => {
                                     return (
                                         <WordCheckBoxMemo
@@ -67,6 +73,7 @@ export const ScoreTable = (props) => {
                                 })}
                             </td>
                             <td>
+                                <div className="table-icon"><EmojiPeopleIcon /></div>
                                 {
                                     <WordCheckBoxMemo
                                         checkedBox={i.used}

@@ -50,6 +50,7 @@ main {
 }
 
 .hamburger-menu {
+  z-index: 99;
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -123,6 +124,7 @@ main {
     color: var(--gray800);
     border-radius: 4px;
     margin-bottom: 2rem;
+    word-break: break-word;
     p {
       margin: 0;
       margin-bottom: 1rem;
@@ -219,7 +221,10 @@ main {
   border-radius: 4px;
   letter-spacing: 2px;
 }
-
+.table-icon {
+  display: none;
+  opacity: 0.3;
+}
 .undo__container {
   width: 100%;
   display: flex;
@@ -257,7 +262,7 @@ main {
 .overlay {
   z-index: 999;
   position: fixed;
-  height: 100vh;
+  height: auto;
   background: var(--gray100);
   top: 0;
   left: 0;

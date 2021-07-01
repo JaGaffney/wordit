@@ -1,3 +1,5 @@
+import axios from "axios"
+
 const localStorageSave = data => {
   if (typeof window !== "undefined") {
     localStorage.setItem("user", JSON.stringify(data))
@@ -5,6 +7,14 @@ const localStorageSave = data => {
 }
 
 export const setWOTD = (word: string) => dispatch => {
+  // axios.get(`http://54.79.56.47/api/all`).then(res => {
+  //   console.log(res.data)
+  // })
+
+  // axios.get(`http://54.79.56.47/api/word/tsy`).then(res => {
+  //   console.log(res.data)
+  // })
+
   return dispatch({
     type: "SET_WOTD",
     payload: word,

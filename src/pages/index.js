@@ -29,6 +29,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="wordit" />
+
       <section className="main-panel">
         <WOTD />
         <Score />

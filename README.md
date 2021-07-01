@@ -1,6 +1,6 @@
 # wordit Application
 
-[grouper Application](https://jongaffney.tech)
+[Wordit Application](https://wordit.netlify.app)
 
 ## Overview
 
@@ -8,7 +8,7 @@ Application designed to help people with dyslexia increase their vocabulary (thi
 
 ### Features
 
-- 1
+- 1 
 
 - 2
 

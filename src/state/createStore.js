@@ -46,6 +46,7 @@ const initialState = {
   forceLoad: 0,
   undoData: [],
   redoData: [],
+  difficultyArray: [...Array(3).keys()].map(x => ++x),
 }
 
 const undoHandler = state => {
@@ -98,7 +99,6 @@ const reducer = (state, action) => {
         wotd: action.payload,
       }
     case "UPDATE_USER":
-      console.log("update_user")
       return {
         ...state,
         forceLoad: (state.forceLoad += 1),

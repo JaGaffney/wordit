@@ -45,7 +45,7 @@ export const ScoreTable = (props) => {
                             <td>
                                 <div className="table-icon"><MicIcon /></div>
 
-                                {tempRange.map((ii, kk) => {
+                                {props.difficultyArray.map((ii, kk) => {
                                     return (
                                         <WordCheckBoxMemo
                                             checkedBox={i.spoken[ii - 1]}
@@ -60,7 +60,7 @@ export const ScoreTable = (props) => {
                             </td>
                             <td>
                                 <div className="table-icon"><CreateIcon /></div>
-                                {tempRange.map((ii, kk) => {
+                                {props.difficultyArray.map((ii, kk) => {
                                     return (
                                         <WordCheckBoxMemo
                                             checkedBox={i.written[ii - 1]}
@@ -94,8 +94,8 @@ export const ScoreTable = (props) => {
 }
 
 
-const mapStateToProps = ({ user, data, forceLoad }) => {
-    return { user, data, forceLoad }
+const mapStateToProps = ({ user, data, forceLoad, difficultyArray }) => {
+    return { user, data, forceLoad, difficultyArray }
 }
 
 const mapDispatchToProps = { updateWordChallenge, completeWord }

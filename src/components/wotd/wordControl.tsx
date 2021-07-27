@@ -19,15 +19,13 @@ export const WordControl = props => {
     props.onWordChange()
   }
 
-  const tempRange = [1, 2, 3]
-
   const checkBox = (type: string, arr: Array<boolean>) => {
     return (
       <div className="wotd__control-container">
         <div className="border-decoration wotd__control-item">
           <i>{type === "spoken" ? <MicIcon /> : <CreateIcon />}</i>
           <h2>{type} </h2>
-          {tempRange.map(i => {
+          {props.difficultyArray.map(i => {
             return (
               <WordCheckbox
                 checkedBox={arr[i - 1]}
@@ -57,8 +55,8 @@ export const WordControl = props => {
   )
 }
 
-const mapStateToProps = ({ user, data, forceLoad }) => {
-  return { user, data, forceLoad }
+const mapStateToProps = ({ user, data, forceLoad, difficultyArray }) => {
+  return { user, data, forceLoad, difficultyArray }
 }
 
 const mapDispatchToProps = { updateWordChallenge, completeWord }
